@@ -7,7 +7,6 @@ function urlGenerator(index){
 
 pianoKeys.forEach((item, index)=>{
     let url = urlGenerator(index);
-    console.log(url);
     item.onclick = playSoundAudio(url)
 })
 
