@@ -1,4 +1,4 @@
-function addZeroToSingleDigitValue(value){
+const addZeroToSingleDigitValue = (value) => {
    
     value = parseInt(value);
     if(value < 10){

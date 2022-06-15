@@ -1,9 +1,9 @@
 
-function chageRingColorToRed(){
+const chageRingColorToRed = () => {
     document.querySelector('.ring').classList.add('ending');
 }
     
-function chageRingColorToGreen(){
+const chageRingColorToGreen = () => {
     document.querySelector('.ring').classList.remove('ending');
 }
 

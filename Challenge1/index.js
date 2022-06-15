@@ -20,7 +20,7 @@ startButton.addEventListener('click', function(){
 settingsButton.addEventListener('click', onClickSettingsButton)
 
 
-function timerInitialized(){
+const timerInitialized = () => {
 
     if(checkStartButtonText()){
         
@@ -45,7 +45,7 @@ function timerInitialized(){
 }
 
 
-function startTimer(){
+const startTimer = () => {
 
     minutesInputValue = addZeroToSingleDigitValue(minutesInputValue).toString();
     minutesInput.value = minutesInputValue;
@@ -76,7 +76,7 @@ function startTimer(){
 }
 
 
-function setCurrentTimeValueToTimeInputField(){
+const setCurrentTimeValueToTimeInputField = () => {
 
     minutesInputValue = minutesInput.value;
     secondsInputValue = secondsInput.value;

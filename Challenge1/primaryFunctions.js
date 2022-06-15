@@ -5,19 +5,19 @@ import {checkStartButtonText} from "./validateItems.js";
 
 
 
-function stopTimer(){
+const stopTimer = () => {
     clearInterval(timer);
 }
 
 
-function timeIsUp(){
+const timeIsUp = () => {
     clearInterval(timer);
     chageRingColorToRed();
     setTimeout(function(){alert('Time is Up!');}, 1);
     toggleStartButtonText();
 }
 
-function onClickSettingsButton(){
+const onClickSettingsButton = () => {
     if(checkStartButtonText()){
         enableTimeInputField();
     }

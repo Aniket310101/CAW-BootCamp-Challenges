@@ -1,6 +1,6 @@
 import {startButton, minutesInputValue, secondsInputValue} from "./index.js"
 
-function checkStartButtonText(){
+const checkStartButtonText = () => {
     if(startButton.innerHTML === 'start'){
         return true;
     }
@@ -11,7 +11,7 @@ function checkStartButtonText(){
 }
 
 
-function validateTimeInput(){
+const validateTimeInput = () => {
     if(minutesInputValue <= 60 && minutesInputValue >= 0 && 
         secondsInputValue <= 60 && secondsInputValue >= 0 && 
         (minutesInputValue !== "") && (secondsInputValue !== "") && 
