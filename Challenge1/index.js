@@ -83,5 +83,4 @@ function setCurrentTimeValueToTimeInputField(){
 }
 
 
-export {startButton, minutesInput, secondsInput, settingsButton, minutesInputValue, secondsInputValue, timer, 
-    timerInitialized, startTimer, setCurrentTimeValueToTimeInputField}
+export {startButton, minutesInput, secondsInput, settingsButton, minutesInputValue, secondsInputValue, timer}
