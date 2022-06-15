@@ -1,9 +1,10 @@
 import { startButton, minutesInputValue, secondsInputValue } from "./index.js";
 
 const checkStartButtonText = () => {
-  if (startButton.innerHTML === "start") {
+    const isButtonInStartState = startButton.innerHTML === "start"; 
+  if (isButtonInStartState) {
     return true;
-  } else if (startButton.innerHTML === "stop") {
+  } else {
     return false;
   }
 };
