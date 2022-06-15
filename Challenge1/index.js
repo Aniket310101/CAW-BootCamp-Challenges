@@ -45,25 +45,25 @@ const timerInitialized = () => {
 };
 
 const startTimer = () => {
-  minutesInputValue = addZeroToSingleDigitValue(minutesInputValue).toString();
+  minutesInputValue = addZeroToSingleDigitValue(minutesInputValue);
   minutesInput.value = minutesInputValue;
-  secondsInputValue = addZeroToSingleDigitValue(secondsInputValue).toString();
+  secondsInputValue = addZeroToSingleDigitValue(secondsInputValue);
   secondsInput.value = secondsInputValue;
 
   timer = setInterval(function () {
     if (minutesInputValue == 0 && secondsInputValue == 0) {
       timeIsUp();
-    } else if (secondsInputValue === "0" || secondsInputValue === "00") {
+    } else if (secondsInputValue === "00") {
       secondsInputValue = "59";
       minutesInputValue = minutesInputValue - 1;
       minutesInputValue =
-        addZeroToSingleDigitValue(minutesInputValue).toString();
+        addZeroToSingleDigitValue(minutesInputValue);
       minutesInput.value = minutesInputValue;
     } else {
       secondsInputValue = parseInt(secondsInputValue) - 1;
     }
 
-    secondsInputValue = addZeroToSingleDigitValue(secondsInputValue).toString();
+    secondsInputValue = addZeroToSingleDigitValue(secondsInputValue);
     secondsInput.value = secondsInputValue;
   }, 1000);
 };
