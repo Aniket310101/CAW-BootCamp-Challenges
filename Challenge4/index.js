@@ -29,8 +29,8 @@ const isDataKeyValueValid = (keyValue) => {
     keyValue === "TAB" ||
     keyValue === "CAPSLOCK" ||
     keyValue === "ENTER" ||
-    dataKeyValue === "BACKSPACE" ||
-    dataKeyValue === "SHIFT"
+    keyValue === "BACKSPACE" ||
+    keyValue === "SHIFT"
   ) {
     return false;
   }
