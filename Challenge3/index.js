@@ -5,14 +5,16 @@ function urlGenerator(index){
 }
 
 
+const playSoundAudio = (url) => {
+    return () => {
+        new Audio(url).play();
+    }
+}
+
 pianoKeys.forEach((item, index)=>{
     let url = urlGenerator(index);
     item.onclick = playSoundAudio(url)
 })
 
 
-function playSoundAudio(url){
-    return function(){
-        new Audio(url).play();
-    }
-}
+
