@@ -1,5 +1,3 @@
-// import { jiggleKey, selectRandomKey, keyIsValid, removeJiggle } from "./utilities.js";
-
 const keys = document.querySelectorAll(".key");
 
 let keyPressed;
