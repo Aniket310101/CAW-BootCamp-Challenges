@@ -1,5 +1,12 @@
 import { checkListItems } from "./index.js";
 
+let inputField = document.getElementsByTagName("input");
+
+let firstItemChecked;
+let secondItemChecked;
+let isFirstItemChecked = false;
+
+
 export const getParentElement = () => {
   return document.querySelector(".episodes");
 };
@@ -20,6 +27,35 @@ const setInputFieldAttributes = (element, episode) => {
   setAttributes(element, allAttributes);
 };
 
+
+const checkMultipleItems = (firstItem, secondItem) => {
+  inputField.forEach((item)=>{
+    console.log(item);
+  })
+  // console.log(inputField);
+}
+
+
+const checkTheItemClicked = (event) => {
+  
+  // console.log(firstItemChecked);
+
+  if(event.shiftKey){
+    let idItemChecked = event.target.id;
+    // secondItemChecked = parseInt(idItemChecked.substring(idItemChecked.indexOf('-') + 1)) - 1;
+    secondItemChecked = event.target.id;
+    // console.log(secondItemChecked - firstItemChecked);
+    checkMultipleItems(firstItemChecked, secondItemChecked);
+  }
+  else{
+    let idItemChecked = event.target.id;
+    // firstItemChecked = parseInt(idItemChecked.substring(idItemChecked.indexOf('-') + 1)) - 1;
+    firstItemChecked = event.target.id;
+    isFirstItemChecked = true;
+
+  }
+}
+
 export const createListDiv = (parentElement) => {
   let newListDiv = document.createElement("li");
   parentElement.appendChild(newListDiv);
@@ -37,6 +73,8 @@ export const createInputField = (parentElement, episode) => {
   let newInputField = document.createElement("input");
   setInputFieldAttributes(newInputField, episode);
   parentElement.appendChild(newInputField);
+
+  newInputField.addEventListener("click", checkTheItemClicked);
 //   return newInputField;
 };
 
