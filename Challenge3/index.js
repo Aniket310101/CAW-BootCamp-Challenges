@@ -1,6 +1,6 @@
 const pianoKeys = document.querySelectorAll("a");
 
-function urlGenerator(index){
+const urlGenerator = (index) => {
     return `./audio/key-${index+1}.mp3`;
 }
 
