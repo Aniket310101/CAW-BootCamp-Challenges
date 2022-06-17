@@ -1,5 +1,6 @@
 let firstItemChecked;
 let secondItemChecked;
+let isfirstItemChecked = false;
 
 export const getParentElement = () => {
   return document.querySelector(".episodes");
@@ -45,13 +46,14 @@ const selectMultipleItems = (firstItem, secondItem) => {
 };
 
 const selectTheItemClicked = (event) => {
-  if (event.shiftKey) {
+  if (event.shiftKey && isfirstItemChecked) {
     let secondItemId = event.target.id;
     secondItemChecked = parseInt(
       secondItemId.substring(secondItemId.indexOf("-") + 1)
     );
     selectMultipleItems(firstItemChecked, secondItemChecked);
   } else {
+    isfirstItemChecked = event.target.checked;
     let firstItemId = event.target.id;
     firstItemChecked = parseInt(
       firstItemId.substring(firstItemId.indexOf("-") + 1)
