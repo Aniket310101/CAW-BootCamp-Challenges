@@ -7,7 +7,7 @@ import {
   createNodeSpanText,
 } from "./utility.js";
 
-export const episodes = [
+const episodes = [
   {
     id: 1,
     name: "James Q Quick's Origin Story",
