@@ -1,3 +1,7 @@
+import {onAddButtonClick} from "./utilities.js"
+
+let addButton = document.querySelectorAll(".add");
+
 const menuItems = [
     {
         name: 'French Fries with Ketchup',
@@ -42,3 +46,12 @@ const menuItems = [
         count: 0
     }
 ]
+
+addButton.forEach((button)=>{
+    button.addEventListener("click", onAddButtonClick);
+})
+
+
+
+
+
