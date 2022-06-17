@@ -1,11 +1,5 @@
-import { checkListItems } from "./index.js";
-
-let inputField = document.getElementsByTagName("input");
-
 let firstItemChecked;
 let secondItemChecked;
-let isFirstItemChecked = false;
-
 
 export const getParentElement = () => {
   return document.querySelector(".episodes");
@@ -27,34 +21,43 @@ const setInputFieldAttributes = (element, episode) => {
   setAttributes(element, allAttributes);
 };
 
+const checkMultipleItems = (firstItem, secondItem, inputField) => {
+  inputField.forEach((eachItem) => {
+    let getItemId = eachItem.getAttribute("id");
+    let itemId = parseInt(getItemId.substring(getItemId.indexOf("-") + 1));
 
-const checkMultipleItems = (firstItem, secondItem) => {
-  inputField.forEach((item)=>{
-    console.log(item);
-  })
-  // console.log(inputField);
-}
+    if (itemId > firstItem && itemId < secondItem) {
+      eachItem.checked = true;
+    }
+  });
+};
 
+const selectMultipleItems = (firstItem, secondItem) => {
+  let inputField = document.querySelectorAll("input");
 
-const checkTheItemClicked = (event) => {
-  
-  // console.log(firstItemChecked);
-
-  if(event.shiftKey){
-    let idItemChecked = event.target.id;
-    // secondItemChecked = parseInt(idItemChecked.substring(idItemChecked.indexOf('-') + 1)) - 1;
-    secondItemChecked = event.target.id;
-    // console.log(secondItemChecked - firstItemChecked);
-    checkMultipleItems(firstItemChecked, secondItemChecked);
+  if (firstItem > secondItem) {
+    let temp = firstItem;
+    firstItem = secondItem;
+    secondItem = temp;
   }
-  else{
-    let idItemChecked = event.target.id;
-    // firstItemChecked = parseInt(idItemChecked.substring(idItemChecked.indexOf('-') + 1)) - 1;
-    firstItemChecked = event.target.id;
-    isFirstItemChecked = true;
 
+  checkMultipleItems(firstItem, secondItem, inputField);
+};
+
+const selectTheItemClicked = (event) => {
+  if (event.shiftKey) {
+    let secondItemId = event.target.id;
+    secondItemChecked = parseInt(
+      secondItemId.substring(secondItemId.indexOf("-") + 1)
+    );
+    selectMultipleItems(firstItemChecked, secondItemChecked);
+  } else {
+    let firstItemId = event.target.id;
+    firstItemChecked = parseInt(
+      firstItemId.substring(firstItemId.indexOf("-") + 1)
+    );
   }
-}
+};
 
 export const createListDiv = (parentElement) => {
   let newListDiv = document.createElement("li");
@@ -74,8 +77,7 @@ export const createInputField = (parentElement, episode) => {
   setInputFieldAttributes(newInputField, episode);
   parentElement.appendChild(newInputField);
 
-  newInputField.addEventListener("click", checkTheItemClicked);
-//   return newInputField;
+  newInputField.addEventListener("click", selectTheItemClicked);
 };
 
 export const createSpanField = (parentElement) => {
@@ -90,8 +92,3 @@ export const createNodeSpanText = (parentElement, episode) => {
   );
   parentElement.appendChild(nodeEpisodeNameText);
 };
-
-
-export const checkCheckBoxStatus = (item) => {
-    
-}

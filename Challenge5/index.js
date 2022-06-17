@@ -5,16 +5,7 @@ import {
   createInputField,
   createSpanField,
   createNodeSpanText,
-  checkCheckBoxStatus,
 } from "./utility.js";
-
-export let checkListItems = document.getElementsByTagName("input");
-// console.log(checkListItems);
-
-document.addEventListener("click", () => {
-  // console.log(typeof(checkListItems))
-  // console.log(checkCheckBoxStatus());
-})
 
 export const episodes = [
   {
