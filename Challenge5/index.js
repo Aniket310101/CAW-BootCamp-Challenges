@@ -158,8 +158,6 @@ const episodes = [
   },
 ];
 
-document.getSelection().removeAllRanges();
-
 episodes.forEach((episode) => {
   let parentElement = getParentElement();
 
