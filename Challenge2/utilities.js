@@ -52,7 +52,7 @@ const updateCurrentItemPriceOnIncrease = (quantity, element, itemDetails) => {
 const updateCurrentItemPriceOnDecrease = (quantity, element, itemDetails) => {
   if (quantity) {
     const currentPrice = parseFloat(
-      element.childNodes[3].textContent.substring(1),
+        element.childNodes[3].textContent.substring(1),
     );
     const originalPrice = parseFloat(itemDetails.itemPrice.substring(1));
     const newPrice = (currentPrice - originalPrice).toFixed(2);
@@ -101,9 +101,9 @@ const increaseQuantity = (itemDetails) => {
     const parentListNode = getParentElement(event.target);
     const currentQuantity = updateQuantityToIncrease(parentListNode);
     updateCurrentItemPriceOnIncrease(
-      currentQuantity,
-      parentListNode,
-      itemDetails,
+        currentQuantity,
+        parentListNode,
+        itemDetails,
     );
   };
 };
@@ -113,14 +113,14 @@ const decreaseQuantity = (itemDetails, addButtonClicked) => {
     event.stopPropagation();
     const parentListNode = getParentElement(event.target);
     const currentQuantity = updateQuantityToDecrease(
-      addButtonClicked,
-      parentListNode,
-      itemDetails.itemPrice,
+        addButtonClicked,
+        parentListNode,
+        itemDetails.itemPrice,
     );
     updateCurrentItemPriceOnDecrease(
-      currentQuantity,
-      parentListNode,
-      itemDetails,
+        currentQuantity,
+        parentListNode,
+        itemDetails,
     );
   };
 };
@@ -176,8 +176,8 @@ const moveItemToYourCart = (addButtonClicked, itemDetails) => {
   const decreaseButton = createButtonElement();
   decreaseButton.classList.add('decrease');
   decreaseButton.addEventListener(
-    'click',
-    decreaseQuantity(itemDetails, addButtonClicked),
+      'click',
+      decreaseQuantity(itemDetails, addButtonClicked),
   );
   newElementForQuantityWrapper.appendChild(decreaseButton);
 

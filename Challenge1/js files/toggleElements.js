@@ -1,4 +1,4 @@
-import {startButton, minutesInput, secondsInput} from './index.js';
+import {startButton, minutesInput, secondsInput} from './getterFunctions.js';
 import {checkStartButtonText} from './validateItems.js';
 
 const toggleStartButtonText = () => {

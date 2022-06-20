@@ -1,4 +1,4 @@
-import {timer} from './index.js';
+import {timer} from './getterFunctions.js';
 import {toggleStartButtonText, enableTimeInputField} from './toggleElements.js';
 import {chageRingColorToRed} from './changeElements.js';
 import {checkStartButtonText} from './validateItems.js';

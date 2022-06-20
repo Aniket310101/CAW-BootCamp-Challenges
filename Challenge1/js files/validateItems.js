@@ -1,4 +1,8 @@
-import {startButton, minutesInputValue, secondsInputValue} from './index.js';
+import {
+  startButton,
+  minutesInputValue,
+  secondsInputValue,
+} from './getterFunctions.js';
 
 const checkStartButtonText = () => {
   const isButtonInStartState = startButton.innerHTML === 'start';
