@@ -11,6 +11,6 @@ const playSoundAudio = (url) => {
 };
 
 pianoKeys.forEach((item, index) => {
-  let url = urlGenerator(index);
+  const url = urlGenerator(index);
   item.onclick = playSoundAudio(url);
 });

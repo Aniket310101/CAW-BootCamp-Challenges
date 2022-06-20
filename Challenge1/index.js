@@ -2,7 +2,6 @@ import { checkStartButtonText, validateTimeInput } from './validateItems.js';
 import { chageRingColorToGreen } from './changeElements.js';
 import {
   toggleStartButtonText,
-  enableTimeInputField,
   disableTimeInputField
 } from './toggleElements.js';
 import {
@@ -12,10 +11,10 @@ import {
 } from './primaryFunctions.js';
 import { addZeroToSingleDigitValue } from './modifyTimeInput.js';
 
-let startButton = document.querySelector('.start');
-let minutesInput = document.querySelector('.minutes-text');
-let secondsInput = document.querySelector('.seconds-text');
-let settingsButton = document.querySelector('.settings');
+const startButton = document.querySelector('.start');
+const minutesInput = document.querySelector('.minutes-text');
+const secondsInput = document.querySelector('.seconds-text');
+const settingsButton = document.querySelector('.settings');
 let minutesInputValue = minutesInput.value;
 let secondsInputValue = secondsInput.value;
 let timer = 0;

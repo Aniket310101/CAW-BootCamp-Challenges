@@ -2,7 +2,7 @@ const keys = document.querySelectorAll('.key');
 
 let keyPressed;
 let keyCurrentlyJiggling;
-let numberOfKeys = keys.length;
+const numberOfKeys = keys.length;
 
 const crossValidateTheKeyPressed = () => {
   if (keyPressed === keyCurrentlyJiggling) {
@@ -38,16 +38,16 @@ const isDataKeyValueValid = (keyValue) => {
 };
 
 const keyIsValid = (value) => {
-  let dataKeyValue = keys[value].getAttribute('data-key');
+  const dataKeyValue = keys[value].getAttribute('data-key');
   return isDataKeyValueValid(dataKeyValue);
 };
 
 const randomKeySelection = () => {
-  let randomNumber = generateRandomNumber(numberOfKeys);
+  const randomNumber = generateRandomNumber(numberOfKeys);
   if (!keyIsValid(randomNumber)) {
     randomKeySelection();
   } else {
-    let selectedKeyElement = selectRandomKey(randomNumber);
+    const selectedKeyElement = selectRandomKey(randomNumber);
     jiggleKey(selectedKeyElement);
     keyCurrentlyJiggling = selectedKeyElement.getAttribute('data-key');
   }

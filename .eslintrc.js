@@ -8,5 +8,8 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module'
   },
-  rules: {}
+  rules: {
+    'linebreak-style': 0,
+    indent: ['error', 2]
+  }
 };

@@ -4,6 +4,7 @@ let isfirstItemChecked = false;
 
 export const getParentElement = () => document.querySelector('.episodes');
 
+// eslint-disable-next-line require-jsdoc
 function setAttributes(element, attributes) {
   Object.keys(attributes).forEach((attr) => {
     element.setAttribute(attr, attributes[attr]);
