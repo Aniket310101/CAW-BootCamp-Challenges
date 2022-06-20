@@ -10,7 +10,7 @@ const stopTimer = () => {
 const timeIsUp = () => {
   clearInterval(timer);
   chageRingColorToRed();
-  setTimeout(function () {
+  setTimeout(() => {
     alert('Time is Up!');
   }, 1);
   toggleStartButtonText();
