@@ -19,7 +19,7 @@ let minutesInputValue = minutesInput.value;
 let secondsInputValue = secondsInput.value;
 let timer = 0;
 
-startButton.addEventListener('click', function () {
+startButton.addEventListener('click', () => {
   timerInitialized();
 });
 
@@ -49,7 +49,7 @@ const startTimer = () => {
   secondsInputValue = addZeroToSingleDigitValue(secondsInputValue);
   secondsInput.value = secondsInputValue;
 
-  timer = setInterval(function () {
+  timer = setInterval(() => {
     if (minutesInputValue == 0 && secondsInputValue == 0) {
       timeIsUp();
     } else if (secondsInputValue === '00') {
