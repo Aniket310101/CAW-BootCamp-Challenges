@@ -1,4 +1,4 @@
-import { startButton, minutesInputValue, secondsInputValue } from './index.js';
+import {startButton, minutesInputValue, secondsInputValue} from './index.js';
 
 const checkStartButtonText = () => {
   const isButtonInStartState = startButton.innerHTML === 'start';
@@ -42,4 +42,4 @@ const checkIfDecimalValue = (minutes, seconds) => {
   return false;
 };
 
-export { checkStartButtonText, validateTimeInput };
+export {checkStartButtonText, validateTimeInput};

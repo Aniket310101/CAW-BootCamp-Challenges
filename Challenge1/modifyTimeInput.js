@@ -6,4 +6,4 @@ const addZeroToSingleDigitValue = (value) => {
   return value;
 };
 
-export { addZeroToSingleDigitValue };
+export {addZeroToSingleDigitValue};

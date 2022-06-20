@@ -1,8 +1,4 @@
-import {
-  subTotalElement,
-  taxElement,
-  totalAmountElement
-} from './utilities.js';
+import {subTotalElement, taxElement, totalAmountElement} from './utilities.js';
 
 export const addToSubtotal = (price) => {
   const subTotalAmount = parseFloat(subTotalElement.textContent.substring(1));

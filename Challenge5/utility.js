@@ -15,7 +15,7 @@ const setInputFieldAttributes = (element, episode) => {
   const allAttributes = {
     type: 'checkbox',
     name: `episode-${episode.id}`,
-    id: `episode-${episode.id}`
+    id: `episode-${episode.id}`,
   };
 
   setAttributes(element, allAttributes);
@@ -26,7 +26,7 @@ const checkMultipleItems = (firstItem, secondItem, inputField) => {
     const getItemId = eachItem.getAttribute('id');
     const itemId = parseInt(
       getItemId.substring(getItemId.indexOf('-') + 1),
-      10
+      10,
     );
 
     if (itemId > firstItem && itemId < secondItem) {
@@ -52,7 +52,7 @@ const selectTheItemClicked = (event) => {
     const secondItemId = event.target.id;
     secondItemChecked = parseInt(
       secondItemId.substring(secondItemId.indexOf('-') + 1),
-      10
+      10,
     );
     selectMultipleItems(firstItemChecked, secondItemChecked);
   } else {
@@ -60,7 +60,7 @@ const selectTheItemClicked = (event) => {
     const firstItemId = event.target.id;
     firstItemChecked = parseInt(
       firstItemId.substring(firstItemId.indexOf('-') + 1),
-      10
+      10,
     );
   }
 };
@@ -94,7 +94,7 @@ export const createSpanField = (parentElement) => {
 
 export const createNodeSpanText = (parentElement, episode) => {
   const nodeEpisodeNameText = document.createTextNode(
-    `${episode.id} || ${episode.name}`
+    `${episode.id} || ${episode.name}`,
   );
   parentElement.appendChild(nodeEpisodeNameText);
 };

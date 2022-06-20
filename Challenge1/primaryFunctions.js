@@ -1,10 +1,7 @@
-import { timer } from './index.js';
-import {
-  toggleStartButtonText,
-  enableTimeInputField
-} from './toggleElements.js';
-import { chageRingColorToRed } from './changeElements.js';
-import { checkStartButtonText } from './validateItems.js';
+import {timer} from './index.js';
+import {toggleStartButtonText, enableTimeInputField} from './toggleElements.js';
+import {chageRingColorToRed} from './changeElements.js';
+import {checkStartButtonText} from './validateItems.js';
 
 const stopTimer = () => {
   clearInterval(timer);
@@ -27,4 +24,4 @@ const onClickSettingsButton = () => {
   }
 };
 
-export { stopTimer, timeIsUp, onClickSettingsButton };
+export {stopTimer, timeIsUp, onClickSettingsButton};

@@ -1,15 +1,15 @@
-import { checkStartButtonText, validateTimeInput } from './validateItems.js';
-import { chageRingColorToGreen } from './changeElements.js';
+import {checkStartButtonText, validateTimeInput} from './validateItems.js';
+import {chageRingColorToGreen} from './changeElements.js';
 import {
   toggleStartButtonText,
-  disableTimeInputField
+  disableTimeInputField,
 } from './toggleElements.js';
 import {
   stopTimer,
   timeIsUp,
-  onClickSettingsButton
+  onClickSettingsButton,
 } from './primaryFunctions.js';
-import { addZeroToSingleDigitValue } from './modifyTimeInput.js';
+import {addZeroToSingleDigitValue} from './modifyTimeInput.js';
 
 const startButton = document.querySelector('.start');
 const minutesInput = document.querySelector('.minutes-text');
@@ -78,5 +78,5 @@ export {
   settingsButton,
   minutesInputValue,
   secondsInputValue,
-  timer
+  timer,
 };

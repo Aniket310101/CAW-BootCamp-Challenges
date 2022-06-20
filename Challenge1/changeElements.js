@@ -6,4 +6,4 @@ const chageRingColorToGreen = () => {
   document.querySelector('.ring').classList.remove('ending');
 };
 
-export { chageRingColorToRed, chageRingColorToGreen };
+export {chageRingColorToRed, chageRingColorToGreen};

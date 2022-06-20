@@ -1,4 +1,4 @@
-import { isCartEmpty, onAddButtonClick } from './utilities.js';
+import {isCartEmpty, onAddButtonClick} from './utilities.js';
 const addButton = document.querySelectorAll('.add');
 // const menuItems = [
 //   {

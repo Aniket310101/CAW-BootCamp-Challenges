@@ -2,7 +2,7 @@ import {
   addToSubtotal,
   totalAmount,
   addTotalTax,
-  substractFromSubtotal
+  substractFromSubtotal,
 } from './calculateAmount.js';
 
 export const subTotalElement = document.querySelector('.amount.price.subtotal');
@@ -52,7 +52,7 @@ const updateCurrentItemPriceOnIncrease = (quantity, element, itemDetails) => {
 const updateCurrentItemPriceOnDecrease = (quantity, element, itemDetails) => {
   if (quantity) {
     const currentPrice = parseFloat(
-      element.childNodes[3].textContent.substring(1)
+      element.childNodes[3].textContent.substring(1),
     );
     const originalPrice = parseFloat(itemDetails.itemPrice.substring(1));
     const newPrice = (currentPrice - originalPrice).toFixed(2);
@@ -103,7 +103,7 @@ const increaseQuantity = (itemDetails) => {
     updateCurrentItemPriceOnIncrease(
       currentQuantity,
       parentListNode,
-      itemDetails
+      itemDetails,
     );
   };
 };
@@ -115,12 +115,12 @@ const decreaseQuantity = (itemDetails, addButtonClicked) => {
     const currentQuantity = updateQuantityToDecrease(
       addButtonClicked,
       parentListNode,
-      itemDetails.itemPrice
+      itemDetails.itemPrice,
     );
     updateCurrentItemPriceOnDecrease(
       currentQuantity,
       parentListNode,
-      itemDetails
+      itemDetails,
     );
   };
 };
@@ -177,7 +177,7 @@ const moveItemToYourCart = (addButtonClicked, itemDetails) => {
   decreaseButton.classList.add('decrease');
   decreaseButton.addEventListener(
     'click',
-    decreaseQuantity(itemDetails, addButtonClicked)
+    decreaseQuantity(itemDetails, addButtonClicked),
   );
   newElementForQuantityWrapper.appendChild(decreaseButton);
 
@@ -209,7 +209,7 @@ const saveItemDetails = (parentElement) => {
   return {
     itemName: parentElement.childNodes[1].innerText,
     itemPrice: parentElement.childNodes[3].innerText,
-    itemImage: parentElement.previousSibling.previousSibling.childNodes[1].src
+    itemImage: parentElement.previousSibling.previousSibling.childNodes[1].src,
   };
 };
 
