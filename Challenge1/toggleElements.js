@@ -1,11 +1,11 @@
-import { startButton, minutesInput, secondsInput } from "./index.js";
-import { checkStartButtonText } from "./validateItems.js";
+import { startButton, minutesInput, secondsInput } from './index.js';
+import { checkStartButtonText } from './validateItems.js';
 
 const toggleStartButtonText = () => {
   if (checkStartButtonText()) {
-    startButton.innerHTML = "stop";
+    startButton.innerHTML = 'stop';
   } else {
-    startButton.innerHTML = "start";
+    startButton.innerHTML = 'start';
   }
 };
 

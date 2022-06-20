@@ -1,4 +1,4 @@
-const keys = document.querySelectorAll(".key");
+const keys = document.querySelectorAll('.key');
 
 let keyPressed;
 let keyCurrentlyJiggling;
@@ -16,9 +16,9 @@ const getKeyPressed = (event) => {
   crossValidateTheKeyPressed();
 };
 
-document.addEventListener("keypress", getKeyPressed);
+document.addEventListener('keypress', getKeyPressed);
 
-const jiggleKey = (keyElement) => keyElement.classList.add("jiggle");
+const jiggleKey = (keyElement) => keyElement.classList.add('jiggle');
 
 const generateRandomNumber = (value) => Math.floor(Math.random() * value);
 
@@ -26,11 +26,11 @@ const selectRandomKey = (elementIndexValue) => keys[elementIndexValue];
 
 const isDataKeyValueValid = (keyValue) => {
   if (
-    keyValue === "TAB" ||
-    keyValue === "CAPSLOCK" ||
-    keyValue === "ENTER" ||
-    keyValue === "BACKSPACE" ||
-    keyValue === "SHIFT"
+    keyValue === 'TAB' ||
+    keyValue === 'CAPSLOCK' ||
+    keyValue === 'ENTER' ||
+    keyValue === 'BACKSPACE' ||
+    keyValue === 'SHIFT'
   ) {
     return false;
   }
@@ -38,7 +38,7 @@ const isDataKeyValueValid = (keyValue) => {
 };
 
 const keyIsValid = (value) => {
-  let dataKeyValue = keys[value].getAttribute("data-key");
+  let dataKeyValue = keys[value].getAttribute('data-key');
   return isDataKeyValueValid(dataKeyValue);
 };
 
@@ -49,11 +49,11 @@ const randomKeySelection = () => {
   } else {
     let selectedKeyElement = selectRandomKey(randomNumber);
     jiggleKey(selectedKeyElement);
-    keyCurrentlyJiggling = selectedKeyElement.getAttribute("data-key");
+    keyCurrentlyJiggling = selectedKeyElement.getAttribute('data-key');
   }
 };
 
 const removeJiggle = () =>
-  document.querySelector(".jiggle").classList.remove("jiggle");
+  document.querySelector('.jiggle').classList.remove('jiggle');
 
 randomKeySelection();

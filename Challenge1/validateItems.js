@@ -1,7 +1,7 @@
-import { startButton, minutesInputValue, secondsInputValue } from "./index.js";
+import { startButton, minutesInputValue, secondsInputValue } from './index.js';
 
 const checkStartButtonText = () => {
-    const isButtonInStartState = startButton.innerHTML === "start"; 
+  const isButtonInStartState = startButton.innerHTML === 'start';
   if (isButtonInStartState) {
     return true;
   } else {
@@ -29,14 +29,14 @@ const checkInputValueRange = (minutes, seconds) => {
 };
 
 const checkIfValueEmpty = (minutes, seconds) => {
-  if (minutes !== "" && seconds !== "") {
+  if (minutes !== '' && seconds !== '') {
     return true;
   }
   return false;
 };
 
 const checkIfDecimalValue = (minutes, seconds) => {
-  if (minutes.indexOf(".") === -1 && seconds.indexOf(".") === -1) {
+  if (minutes.indexOf('.') === -1 && seconds.indexOf('.') === -1) {
     return true;
   }
   return false;
