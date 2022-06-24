@@ -55,7 +55,6 @@ ul {
     padding-bottom: 45px;
 }
 
-
 ul.menu li {
     margin-left: 15px;
     display: flex;
@@ -182,7 +181,6 @@ button.in-cart {
     margin: 0 30px 0 25px;
 }
 
-
 .cart-summary .menu-item {
     margin-bottom: 5px;
 }
@@ -190,7 +188,6 @@ button.in-cart {
 .cart-summary p {
     margin-bottom: 0;
 }
-
 
 .decrease img {
     top: 1px;
@@ -213,7 +210,6 @@ button.in-cart {
     top: 0;
     z-index: 1;
 }
-
 
 .cart .quantity {
     background: black;
