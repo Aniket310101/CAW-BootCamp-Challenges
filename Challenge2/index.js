@@ -3,5 +3,5 @@ const addButton = document.querySelectorAll('.add');
 
 isCartEmpty();
 addButton.forEach((button) => {
-  button.addEventListener('click', onAddButtonClick);
+    button.addEventListener('click', onAddButtonClick);
 });
