@@ -2,6 +2,7 @@
   "devDependencies": {
     "eslint": "^8.18.0",
     "eslint-config-google": "^0.14.0",
+    "eslint-plugin-html": "^6.2.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.2",
     "prettier": "^2.7.1",
@@ -16,12 +17,11 @@
     }
   },
   "lint-staged": {
-    "*.{html,js}": [
+    "*.{html,js,yml}": [
       "prettier --write",
       "eslint --fix",
       "git add"
     ],
-
     "*.css": [
       "stylelint \"**/*.css\" --fix"
     ]
