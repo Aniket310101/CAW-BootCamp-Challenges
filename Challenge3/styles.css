@@ -1,27 +1,27 @@
 body {
-  background: #37b2c3;
+    background: #37b2c3;
 }
 
 .piano {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .white-keys {
-  fill: white;
+    fill: white;
 }
 
 .white-keys:hover {
-  fill: #ffd200;
+    fill: #ffd200;
 }
 
 .black-keys {
-  fill: black;
+    fill: black;
 }
 
 .black-keys:hover {
-  fill: #f40082;
+    fill: #f40082;
 }
