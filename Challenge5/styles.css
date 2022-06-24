@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap');
+@import 'https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;700&display=swap';
 
 body {
   background: #f3f3f3;
@@ -10,11 +10,11 @@ body {
   font-family: 'Nunito Sans', sans-serif;
   justify-content: center;
 }
+
 li {
   user-select: none; /* CSS3 (little to no support) */
-  -ms-user-select: none; /* IE 10+ */
-  -moz-user-select: none; /* Gecko (Firefox) */
-  -webkit-user-select: none; /* Webkit (Safari, Chrome) */
+  margin-bottom: 24px;
+  font-size: 1rem;
 }
 
 .wrapper {
@@ -23,7 +23,7 @@ li {
 }
 
 .cover {
-  filter: drop-shadow(0px 4px 24px #453f3f);
+  filter: drop-shadow(0 4px 24px #453f3f);
 }
 
 .content {
@@ -41,7 +41,7 @@ h1 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #a7a7a7;
-  margin: 0 0 40px 0;
+  margin: 0 0 40px;
   padding: 0;
 }
 
@@ -55,10 +55,10 @@ ul {
   padding: 0;
 }
 
-li {
+/* li {
   margin-bottom: 24px;
   font-size: 1rem;
-}
+} */
 
 label {
   cursor: pointer;
